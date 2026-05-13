@@ -30,3 +30,9 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     }, 3000);
 }    
 });
+
+// Tambahkan ini di paling bawah login.js
+function register() {
+    window.location.href = "register.html"; 
+}
+
