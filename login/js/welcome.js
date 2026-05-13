@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("userInfo").innerText = "Halo, " + user;
 
         document.getElementById("authArea").innerHTML = `
-            <button onclick="logout()" class="nav-cta">Keluar</button>
+            <li><a href="javascript:void(0)" onclick="logout()">
+            <i class="fa fa-sign-out"></i>
+            <em>Keluar</em>
+            </a>
+            </li>
         `;
     }
 
