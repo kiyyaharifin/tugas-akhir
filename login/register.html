@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <!-- FORM MULAI DISINI -->
+                <form class="login" id="loginForm">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" id="username" placeholder="User name / Email" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" id="password" placeholder="Password" required>
+                    </div>
+                    <button class="button login__submit" type="submit" id="login-button">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>
+                <!-- BAGIAN DAFTAR (PENGGANTI SOSIAL MEDIA) -->
+                <div class="social-login">
+                    <h3>Belum punya akun?</h3>
+                    <button
+						type="button"
+						onclick="register()"
+				        class="button login__submit" 
+                        style="margin-top: 10px; border-bottom: 2px solid #D1D1D4;">
+                        <span class="button__text">DAFTAR SEKARANG</span>
+                        <i class="button__icon fas fa-user-plus"></i>
+                   </button>
+                </div>
+            </div>
+         </div>
+    </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
+    </div>
+    
+    <!-- Pastikan file JS dari guru diletakkan di bawah sini -->
+    <script src="js/register.js" defer></script>
+</body>
+</html>
