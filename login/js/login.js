@@ -15,15 +15,12 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const data = await res.json();
 
     if (data.status === "success") {
-        // simpan username
-            localStorage.setItem("username", data.username);
-            window.location.href = "../index.html";
-         
-    // } else {
-    //     document.getElementById("message").innerText = "Username / Password salah";alert("Login gagal");
-    // }
-    
-    } else {
+    // Simpan ke localStorage agar landing page tahu siapa yang login
+    localStorage.setItem("username", data.username);
+    // Pindah ke landing page
+    window.location.href = "../index.html";
+} else {
+    // Menampilkan pesan error jika login gagal
     const alertBox = document.getElementById("alertBox");
     alertBox.innerText = "Username atau Password salah, silahkan coba lagi";
     alertBox.style.display = "block";
@@ -31,6 +28,5 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     setTimeout(() => {
         alertBox.style.display = "none";
     }, 3000);
-} 
-   
+}    
 });
